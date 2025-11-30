@@ -1,8 +1,6 @@
 #!/bin/bash
 
-# Simple System Monitor Script
 
-# Default values
 THRESHOLD=80
 OUTPUT_FILE="system_monitor.log"
 
@@ -59,7 +57,7 @@ cpu_usage=$(top -bn1 | grep "Cpu(s)" | awk '{printf "%.1f%%", $2 + $4}')
 echo "Current CPU Usage: $cpu_usage"
 echo ""
 
-# Memory Usage - SIMPLE AND CORRECT
+# Memory Usage
 echo "Memory Usage:"
 # Just use free -h and extract the main line
 free -h | grep 'Mem:' | awk '{print "Total Memory: " $2 "\nUsed Memory: " $3 "\nFree Memory: " $4}'
