@@ -59,7 +59,6 @@ echo ""
 
 # Memory Usage
 echo "Memory Usage:"
-# Just use free -h and extract the main line
 free -h | grep 'Mem:' | awk '{print "Total Memory: " $2 "\nUsed Memory: " $3 "\nFree Memory: " $4}'
 echo ""
 
